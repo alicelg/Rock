@@ -1,22 +1,22 @@
 <div class="container-fluid color" *ngIf="selectedArtist">
     <div class="row ">
-        <div class="col-2 p-5">
+        <div class="col-md-2 p-5">
 
-            <h3 class="text-center pt-5 pb-3">Artistas</h3>
+            <h3 class="text-center pt-5 pb-3 aside">Artistas</h3>
 
-            <ul class="list-group list-group-flush" *ngFor="let artist of arrArtists; let indice = index"
+            <ul class="list-group list-group-flush aside" *ngFor="let artist of arrArtists; let indice = index"
                 [routerLink]="['detail', artist.id]">
                 <li class="list-group-item">{{artist.band}}</li>
 
             </ul>
         </div>
-        <div class="col-10">
+        <div class="col-md-10">
             <div class="row container-header pt-5 pb-5">
                 <div class="col-md-4 text-center">
                     <img [src]="selectedArtist.image" class="rounded-circle m-3 " alt="...">
                 </div>
                 <div class="col-md-8">
-                    <h2 class="mt-5">{{selectedArtist.band}}</h2>
+                    <h2 class="mt-5 text-center text-md-left title">{{selectedArtist.band}}</h2>
                 </div>
             </div>
             <div class="row container-body pt-5 pb-5">
