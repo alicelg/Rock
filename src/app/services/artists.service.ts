@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Artists } from 'src/assets/data/artists';
+import { initArtists } from 'src/assets/data/artists';
 
-export interface Artists {
-    id: number,
-    band: string,
-    origin: string,
-    description: string,
-    image: string,
-    spotify: string,
-    imusic: string,
-    youtube: string,
-    members: string,
-    exmembers: string,
-    web: string
+export interface Artist {
+    id: number;
+    band: string;
+    origin: string;
+    description: string;
+    image: string;
+    spotify: string;
+    imusic: string;
+    youtube: string;
+    members: string;
+    exmembers: string;
+    web: string;
 }
 
 @Injectable({
     providedIn: 'root'
 })
-export class ArtistsService {
+export class ArtistService {
 
-    artists: Artists[];
+    artists: Artist[];
 
     constructor(
         private router: Router
@@ -29,23 +29,23 @@ export class ArtistsService {
         if (localStorage.getItem('artists')) {
             this.artists = JSON.parse(localStorage.getItem('artists'));
         } else {
-            this.artists = Artists;
+            this.artists = initArtists;
         }
     }
 
-    addArtist(artists: Artists, id): Promise<any> {
+    addArtist(artist: Artist, id): Promise<any> {
         return new Promise((resolve, reject) => {
-            artists.id = id;
+            artist.id = id;
             console.log(this.artists);
-            this.artists.push(artists);
+            this.artists.push(artist);
 
             localStorage.setItem('artists', JSON.stringify(this.artists));
-            resolve(this.router.navigate(['home', artists.id]));
+            resolve(this.router.navigate(['home', artist.id]));
         })
     }
 
 
-    getAllArtists(): Promise<Artists[]> {
+    getAllArtists(): Promise<Artist[]> {
         return new Promise((resolve, reject) => {
             resolve(this.artists);
         })
@@ -56,9 +56,9 @@ export class ArtistsService {
         localStorage.setItem('artists', JSON.stringify(this.artists));
     }
 
-    getById(pId: number): Promise<Artists> {
+    getById(aId: number): Promise<Artist> {
         return new Promise((resolve, reject) => {
-            resolve(this.artists.find(post => post.id === pId))
+            resolve(this.artists.find(artist => artist.id === aId))
         })
     }
 }

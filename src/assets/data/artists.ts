@@ -1,4 +1,4 @@
-export const Artists = [
+export const initArtists = [
     {
         id: 0,
         band: "The Rolling Stones",
