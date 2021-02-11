@@ -1,0 +1,112 @@
+.container-header {
+    background-color: #030303;
+}
+
+.container-body {
+    background-color: #181818;
+}
+
+// titulo
+
+.title {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: title 1s ease-in-out infinite alternate;
+}
+
+@keyframes title {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073,
+            0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6,
+            0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+// buscador
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid #e60073;
+    padding: 10px;
+}
+
+.search_input {
+    color: blue;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    padding: 0;
+}
+
+.searchbar:hover,
+.searchbar_dirty {
+    background-color: orange;
+
+    .search_input {
+        padding: 0 25px;
+        width: 450px;
+        transition: width 0.4s linear;
+    }
+
+    .search_icon {
+        background: rgb(229, 238, 229);
+    }
+
+    .search-results {
+        margin-top: 10px;
+        padding: 10px 25px;
+        width: 100%;
+        transition: width 0.4s linear;
+        border-radius: 5px;
+        background-color: red;
+    }
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: orange;
+    svg {
+        fill: orange;
+    }
+}
+
+@media (max-width: 575px) {
+    .searchbar:hover > .search_input {
+        width: 250px;
+    }
+}
+
+// card
+
+.card {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #333333;
+}
+
+.text-body {
+    color: white !important;
+}
