@@ -12,7 +12,8 @@ export interface Artists {
     imusic: string,
     youtube: string,
     members: string,
-    exmembers: string
+    exmembers: string,
+    web: string
 }
 
 @Injectable({
