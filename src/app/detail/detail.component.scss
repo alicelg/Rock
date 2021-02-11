@@ -1,0 +1,33 @@
+.container-header {
+    background-color: #030303;
+}
+
+.container-body {
+    background-color: #181818;
+}
+
+h2 {
+    font-size: 100px;
+    color: yellow;
+    padding-top: 20px;
+}
+
+h3,
+strong {
+    color: yellow;
+}
+
+p,
+h6 {
+    color: white;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}

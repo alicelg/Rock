@@ -29,7 +29,8 @@
 
         <div class="row pb-5">
 
-            <div class="card m-3 mx-auto" style="width: 16rem;" *ngFor="let artists of arrArtists; let indice = index">
+            <div class="card m-3 mx-auto" style="width: 16rem;" *ngFor="let artists of arrArtists; let indice = index"
+                routerLink="detail">
                 <img src={{artists.image}} class="rounded-circle m-3 " alt="...">
                 <div class="text-body text-center">
                     <h3>{{artists.band}}</h3>

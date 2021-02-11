@@ -7,7 +7,7 @@ export const Artists = [
         image: "https://www.ecured.cu/images/thumb/2/25/Kiss.jpg/260px-Kiss.jpg",
         spotify: "https://open.spotify.com/playlist/2M7YeNwuRkDfTJYYwhPCkR",
         imusic: "https://music.apple.com/es/artist/the-rolling-stones/1249595",
-        youtube: "https://www.youtube.com/watch?v=YzjZEci-EiU&ab_channel=ClassicRockCollection ",
+        youtube: "https://www.youtube.com/embed/YzjZEci-EiU",
         web: "https://rollingstones.com/",
         members: "Mick Jagger, Keith Richards, Charlie Watts, Ronnie Wood",
         exmembers: "Brian Jones, Ian Stewart, Bill Wyman, Mick Taylor, Dick Taylor, Tony Chapman, Mick Avory"

@@ -1,1 +1,103 @@
-<p>detail works!</p>
+<div class="container-fluid container-header pt-5 pb-5">
+
+    <div class="container">
+
+        <div class="row" *ngIf="artistsSelect">
+
+            <div class="col-md-3 col-12 text-center">
+                <img src={{artistsSelect.image}} class="rounded-circle m-3 " alt="...">
+            </div>
+
+            <div class="col-md-9 mt-5 col-12">
+                <h2 class="text-center">{{artistsSelect.band}}</h2>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="container-fluid container-body pb-5">
+
+    <div class="container" *ngIf="artistsSelect">
+
+
+        <div class="row pt-5 pb-5">
+
+            <div class="col-md-4 col-12">
+
+                <h3 class="text-center mb-4">Descripción</h3>
+
+                <p>{{artistsSelect.description}}</p>
+
+            </div>
+
+            <div class="col-md-7 col-12 ml-md-5 mt-5 mt-md-0">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YzjZEci-EiU" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-12">
+
+                <h3 class="text-center mb-4">Datos curiosos</h3>
+
+                <h6 class="mb-3"> <strong>Origen:</strong> {{artistsSelect.origin}}</h6>
+
+                <h6 class="mb-3"> <strong>Miembros:</strong> {{artistsSelect.members}}</h6>
+
+                <h6 class="mb-3"> <strong>Ex-miembros: </strong> {{artistsSelect.exmembers}}</h6>
+
+
+            </div>
+
+            <div class="col-md-8 col-12 text-center mx-auto mt-5 mt-md-0">
+
+                <h3 class="text-center mb-4">Empezar a escuchar </h3>
+
+                <div class="row mx-auto">
+
+                    <div class="col-3">
+
+                        <a href="{{artistsSelect.youtube}}" target="_blank">
+                            <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c545.png"
+                                class="rounded mt-md-4 mt-2" alt="..." width="100%"></a>
+                    </div>
+
+                    <div class="col-3">
+
+                        <a href="{{artistsSelect.imusic}}" target="_blank">
+                            <img src="https://yungcitizen.com/wp-content/uploads/2018/09/apple_music_logo.png"
+                                class="rounded" alt="..." width="100%"></a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="{{artistsSelect.spotify}}" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" class="rounded"
+                                alt="..." width="100%"></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="{{artistsSelect.web}}" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/GNOME_Web_logo--2018.svg/1200px-GNOME_Web_logo--2018.svg.png"
+                                class="rounded" alt="..." width="100%"></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
