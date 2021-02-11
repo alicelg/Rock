@@ -40,7 +40,7 @@
 }
 
 .search_input {
-    color: blue;
+    color: #e60073;
     border: 0;
     outline: 0;
     background: none;
@@ -53,7 +53,7 @@
 
 .searchbar:hover,
 .searchbar_dirty {
-    background-color: orange;
+    background-color: #181818;
 
     .search_input {
         padding: 0 25px;
@@ -62,7 +62,7 @@
     }
 
     .search_icon {
-        background: rgb(229, 238, 229);
+        background: black;
     }
 
     .search-results {
@@ -84,10 +84,6 @@
     align-items: center;
     border-radius: 50%;
     text-decoration: none;
-    color: orange;
-    svg {
-        fill: orange;
-    }
 }
 
 @media (max-width: 575px) {
