@@ -64,15 +64,6 @@
     .search_icon {
         background: black;
     }
-
-    .search-results {
-        margin-top: 10px;
-        padding: 10px 25px;
-        width: 100%;
-        transition: width 0.4s linear;
-        border-radius: 5px;
-        background-color: red;
-    }
 }
 
 .search_icon {
@@ -84,6 +75,7 @@
     align-items: center;
     border-radius: 50%;
     text-decoration: none;
+    color: #e60073;
 }
 
 @media (max-width: 575px) {
