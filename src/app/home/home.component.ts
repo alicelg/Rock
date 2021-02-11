@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Artists, ArtistsService } from '../services/artists.service';
+import { Artist, ArtistService } from '../services/artists.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,12 @@ import { Artists, ArtistsService } from '../services/artists.service';
 })
 export class HomeComponent implements OnInit {
 
-  arrArtists: Artists[];
+  arrArtists: Artist[];
 
-
-  constructor(private artistsService: ArtistsService) { }
+  constructor(private artistService: ArtistService) { }
 
   ngOnInit(): void {
-    this.artistsService.getAllArtists()
+    this.artistService.getAllArtists()
       .then(artists => {
         this.arrArtists = artists;
       })
