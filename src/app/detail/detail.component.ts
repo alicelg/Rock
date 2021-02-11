@@ -10,20 +10,25 @@ import { Artist, ArtistService } from '../services/artists.service';
 })
 export class DetailComponent implements OnInit {
 
-
+  arrArtists: Artist[];
   selectedArtist: Artist
 
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private artistsService: ArtistService,
+    private artistService: ArtistService,
     private router: Router) { }
 
   ngOnInit(): void {
 
+    this.artistService.getAllArtists()
+      .then(artists => {
+        this.arrArtists = artists;
+      })
+
     const artistId = Number(this.activateRoute.snapshot.paramMap.get('artistId'))
     console.log(artistId);
-    this.artistsService.getById(artistId).then(artist => {
+    this.artistService.getById(artistId).then(artist => {
       if (artist) {
         this.selectedArtist = artist
       } else {
