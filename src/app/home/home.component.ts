@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Artists, ArtistsService } from '../services/artists.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  arrArtists: Artists[];
+
+
+  constructor(private artistsService: ArtistsService) { }
 
   ngOnInit(): void {
+    this.artistsService.getAllArtists()
+      .then(artists => {
+        this.arrArtists = artists;
+      })
   }
 
 }
