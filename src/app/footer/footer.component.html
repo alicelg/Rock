@@ -1,15 +1,22 @@
-<div class="container-fluid color h-100 pb-5">
+<div class="container-fluid color h-100">
 
-    <div class="row p-5 ">
+    <div class="row p-5">
 
-        <div class="col-6">
+        <div class="col-md-6 mb-3">
 
-            <h3> &copy; Rock 70's</h3>
+            <h3 [routerLink]="['home']"> &copy; Rock 70's</h3>
 
         </div>
 
-        <div class="col-6">
-            <h4 class="btn btn-warning right" [routerLink]="['/form']"> ¿No encuentras la banda que búscas?</h4>
+        <div class="col-md-3 col-7 mx-auto">
+            <h4 class="btn btn-warning" [routerLink]="['/form']"> ¿No encuentras la banda que búscas?</h4>
+        </div>
+
+        <div class="col-md-1 col-5">
+            <select name="" id="" class="form-control">
+                <option value="es-ES">Español</option>
+                <option value="en-GB">Ingles</option>
+            </select>
         </div>
     </div>
 
