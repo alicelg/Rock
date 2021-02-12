@@ -23,10 +23,19 @@
                             nombre de la banda es requerido.</span>
                     </div>
 
+                    <div class="form-group">
+                        <label>Origen</label>
+                        <input type="text" formControlName="origin" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('origin').hasError('required') && formArtist.get('origin').touched">
+                            El
+                            país de origen de la banda es requerido.</span>
+                    </div>
+
 
                     <div class="form-group">
                         <label>Descripción</label>
-                        <textarea cols="40" rows="8" type="text" formControlName="description" class="form-control"
+                        <textarea cols="40" rows="4" type="text" formControlName="description" class="form-control"
                             required> </textarea>
                         <span class="text-danger"
                             *ngIf="formArtist.get('description').hasError('required') && formArtist.get('description').touched">
