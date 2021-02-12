@@ -12,11 +12,15 @@
             <h4 class="btn" [routerLink]="['/form']"> ¿No encuentras la banda que búscas?</h4>
         </div>
 
-        <div class="col-md-1 col-5">
-            <select name="" id="" class="form-control">
-                <option value="es-ES">Español</option>
-                <option value="en-GB">Ingles</option>
-            </select>
+        <div class="col-2 text-right">
+            <div ngbDropdown placement="top-right" class="d-inline-block">
+                <button class="btn-select btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Idioma</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                    <button ngbDropdownItem>Español</button>
+                    <button ngbDropdownItem>Ingles</button>
+
+                </div>
+            </div>
         </div>
     </div>
 
