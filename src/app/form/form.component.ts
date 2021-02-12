@@ -12,7 +12,6 @@ export class FormComponent implements OnInit {
 
   formArtist: FormGroup;
   artistId: number;
-  action: string;
 
 
   constructor(
@@ -53,25 +52,21 @@ export class FormComponent implements OnInit {
         Validators.required
       ]),
     })
-    this.artistId = JSON.parse(localStorage.getItem('artists')) ? (JSON.parse(localStorage.getItem('artists')).slice(-1)[0].id + 1) : 1;
+    this.artistId = JSON.parse(localStorage.getItem('posts')) ? (JSON.parse(localStorage.getItem('posts')).slice(-1)[0].id + 1) : 1;
+
   }
 
   ngOnInit(): void { }
 
   async onSubmit() {
-    if (this.formArtist.valid) {
-      if (this.formArtist.value) {
-        await this.artistService.addArtist(this.formArtist.value, this.artistId);
-        console.log(this.formArtist.value);
-        this.artistId++
-        this.formArtist.reset();
-      } else {
-        alert('no')
-      }
-
+    if (this.formArtist.value) {
+      await this.artistService.addArtist(this.formArtist.value, this.artistId);
+      this.artistId++
+      this.formArtist.reset();
     }
   }
-
 }
+
+
 
 
