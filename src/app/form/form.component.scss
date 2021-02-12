@@ -26,3 +26,22 @@
             0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
 }
+
+.form-control {
+    border: 1px solid #e60073;
+    background-color: black;
+}
+
+label {
+    color: #e60073;
+}
+
+.submit {
+    background-color: #e60073;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #ff4da6;
+    color: black;
+}

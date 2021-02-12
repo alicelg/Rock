@@ -14,6 +14,7 @@ export class FormComponent implements OnInit {
   artistId: number;
   action: string;
 
+
   constructor(
     private activateRoute: ActivatedRoute,
     private artistService: ArtistService,
@@ -59,15 +60,18 @@ export class FormComponent implements OnInit {
 
   async onSubmit() {
     if (this.formArtist.valid) {
-      if (this.action === 'new') {
+      if (this.formArtist.value) {
         await this.artistService.addArtist(this.formArtist.value, this.artistId);
         console.log(this.formArtist.value);
         this.artistId++
         this.formArtist.reset();
       } else {
-        alert('Alguno de los campos no está relleno')
+        alert('no')
       }
+
     }
   }
 
 }
+
+

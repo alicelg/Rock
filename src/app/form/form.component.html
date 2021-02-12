@@ -7,12 +7,11 @@
 </div>
 
 
-<div class="container-fluid container-body">
+<div class="container-fluid container-body p-5">
     <div class="container">
 
-        <div class="row">
-
-            <form [formGroup]="formArtist" (ngSubmit)="onSubmit()">
+        <form [formGroup]="formArtist" (ngSubmit)="onSubmit()">
+            <div class="row">
 
                 <div class="col-md-6">
 
@@ -27,7 +26,7 @@
 
                     <div class="form-group">
                         <label>Descripción</label>
-                        <textarea cols="30" rows="10" type="text" formControlName="description" class="form-control"
+                        <textarea cols="40" rows="8" type="text" formControlName="description" class="form-control"
                             required> </textarea>
                         <span class="text-danger"
                             *ngIf="formArtist.get('description').hasError('required') && formArtist.get('description').touched">
@@ -39,7 +38,15 @@
                         <input type="text" formControlName="image" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('image').hasError('required') && formArtist.get('image').touched">
-                            La descripción de la banda es requerida.</span>
+                            La imagen de la banda es requerida.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Miembros</label>
+                        <input type="text" formControlName="members" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('members').hasError('required') && formArtist.get('members').touched">
+                            Los miembros de la banda son requeridos.</span>
                     </div>
 
 
@@ -47,11 +54,59 @@
 
                 <div class="col-md-6">
 
+
+
+                    <div class="form-group">
+                        <label>Ex-Miembros</label>
+                        <input type="text" formControlName="exmembers" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('exmembers').hasError('required') && formArtist.get('exmembers').touched">
+                            Los ex-miembros de la banda son requeridos, en caso de no tener poner ninguno.</span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Spotify</label>
+                        <input type="text" formControlName="spotify" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('spotify').hasError('required') && formArtist.get('spotify').touched">
+                            Añade la url de spotify de la banda.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Youtube</label>
+                        <input type="text" formControlName="youtube" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('youtube').hasError('required') && formArtist.get('youtube').touched">
+                            Añade la url de youtube de la banda.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Imusic</label>
+                        <input type="text" formControlName="imusic" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('imusic').hasError('required') && formArtist.get('imusic').touched">
+                            Añade la url de imusic de la banda.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Web oficial</label>
+                        <input type="text" formControlName="web" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('web').hasError('required') && formArtist.get('web').touched">
+                            Añade la url de web oficial de la banda.</span>
+                    </div>
+
+                    <input type="submit" value="Guardar" class="submit btn form-control mt-4">
+
                 </div>
 
-            </form>
 
-        </div>
+
+            </div>
+
+        </form>
 
     </div>
 
