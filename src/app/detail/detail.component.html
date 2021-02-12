@@ -5,7 +5,7 @@
             <h3 class="text-center pt-5 pb-3 aside">Artistas</h3>
 
             <ul class="list-group list-group-flush aside" *ngFor="let artist of arrArtists; let indice = index"
-                [routerLink]="['detail', artist.id]">
+                (click)="getArtistData(artist.id)" [routerLink]="['/detail', artist.id]">
                 <li class="list-group-item">{{artist.band}}</li>
 
             </ul>

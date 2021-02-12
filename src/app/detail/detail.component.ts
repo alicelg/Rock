@@ -25,9 +25,12 @@ export class DetailComponent implements OnInit {
       .then(artists => {
         this.arrArtists = artists;
       })
-
     const artistId = Number(this.activateRoute.snapshot.paramMap.get('artistId'))
-    console.log(artistId);
+
+    this.getArtistData(artistId)
+  }
+
+  getArtistData(artistId) {
     this.artistService.getById(artistId).then(artist => {
       if (artist) {
         this.selectedArtist = artist
