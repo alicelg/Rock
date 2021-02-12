@@ -40,7 +40,7 @@ export class ArtistService {
             this.artists.push(artist);
 
             localStorage.setItem('artists', JSON.stringify(this.artists));
-            resolve(this.router.navigate(['home', artist.id]));
+            resolve(this.router.navigate(['home']));
         })
     }
 

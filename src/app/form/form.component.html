@@ -1,1 +1,58 @@
-<p>form works!</p>
+<div class="container-fluid color">
+    <div class="row">
+        <div class="col-12 p-5">
+            <h2 class="title text-center p-5">Rock 70's</h2>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid container-body">
+    <div class="container">
+
+        <div class="row">
+
+            <form [formGroup]="formArtist" (ngSubmit)="onSubmit()">
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label>Banda</label>
+                        <input type="text" formControlName="band" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('band').hasError('required') && formArtist.get('band').touched"> El
+                            nombre de la banda es requerido.</span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea cols="30" rows="10" type="text" formControlName="description" class="form-control"
+                            required> </textarea>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('description').hasError('required') && formArtist.get('description').touched">
+                            La descripción de la banda es requerida.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="text" formControlName="image" class="form-control" required>
+                        <span class="text-danger"
+                            *ngIf="formArtist.get('image').hasError('required') && formArtist.get('image').touched">
+                            La descripción de la banda es requerida.</span>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-6">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
