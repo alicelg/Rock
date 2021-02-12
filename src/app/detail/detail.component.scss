@@ -50,6 +50,7 @@ a:hover {
 .aside {
     display: block;
 }
+
 .list-group-item {
     color: #e60073;
     background-color: black;
@@ -63,12 +64,6 @@ a:hover {
 
 .color {
     background-color: black;
-}
-
-@media (max-width: 992px) {
-    .aside {
-        display: none;
-    }
 }
 
 .band {
@@ -90,4 +85,9 @@ a:hover {
         width: 100%;
         height: 100%;
     }
+}
+
+.btn {
+    background-color: #e60073;
+    color: black;
 }

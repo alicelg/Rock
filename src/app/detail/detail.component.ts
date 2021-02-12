@@ -40,4 +40,9 @@ export class DetailComponent implements OnInit {
     })
   }
 
+  onClickDelete(pIndice: number) {
+    this.artistService.deleteArtists(pIndice);
+    this.router.navigate(['home'])
+  }
+
 }
