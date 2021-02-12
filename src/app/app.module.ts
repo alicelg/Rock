@@ -13,7 +13,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,8 +22,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     DetailComponent,
     FormComponent,
-    FooterComponent,
-    FormGroup
+    FooterComponent
   ],
   imports: [
     BrowserModule,
