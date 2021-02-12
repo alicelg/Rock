@@ -9,15 +9,16 @@
         </div>
 
         <div class="col-md-3 col-7 mx-auto">
-            <h4 class="btn" [routerLink]="['/form']"> ¿No encuentras la banda que búscas?</h4>
+            <h4 class="btn" [routerLink]="['/form']"> {{'GENERAL.NOEXIT' |translate}}</h4>
         </div>
 
         <div class="col-2 text-right">
             <div ngbDropdown placement="top-right" class="d-inline-block">
-                <button class="btn-select btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Idioma</button>
+                <button class="btn-select btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{'GENERAL.IDIOMS'
+                    |translate}}</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-                    <button ngbDropdownItem>Español</button>
-                    <button ngbDropdownItem>Ingles</button>
+                    <button ngbDropdownItem (click)="changeLanguage('es-ES')">{{'GENERAL.SPANISH' |translate}}</button>
+                    <button ngbDropdownItem (click)="changeLanguage('en-GB')">{{'GENERAL.ENGLISH' |translate}}</button>
 
                 </div>
             </div>

@@ -16,46 +16,45 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label>Banda</label>
+                        <label>{{'GENERAL.BAND' |translate}}</label>
                         <input type="text" formControlName="band" class="form-control" required>
                         <span class="text-danger"
-                            *ngIf="formArtist.get('band').hasError('required') && formArtist.get('band').touched"> El
-                            nombre de la banda es requerido.</span>
+                            *ngIf="formArtist.get('band').hasError('required') && formArtist.get('band').touched">
+                            {{'GENERAL.ONE-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
-                        <label>Origen</label>
+                        <label>{{'GENERAL.ORIGIN' |translate}}</label>
                         <input type="text" formControlName="origin" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('origin').hasError('required') && formArtist.get('origin').touched">
-                            El
-                            país de origen de la banda es requerido.</span>
+                            {{'GENERAL.TEN-MESSAGE' |translate}}</span>
                     </div>
 
 
                     <div class="form-group">
-                        <label>Descripción</label>
+                        <label>{{'GENERAL.DESCRIPTION' |translate}}</label>
                         <textarea cols="40" rows="4" type="text" formControlName="description" class="form-control"
                             required> </textarea>
                         <span class="text-danger"
                             *ngIf="formArtist.get('description').hasError('required') && formArtist.get('description').touched">
-                            La descripción de la banda es requerida.</span>
+                            {{'GENERAL.TWO-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
-                        <label>Imagen</label>
+                        <label>{{'GENERAL.IMAGE' |translate}}</label>
                         <input type="text" formControlName="image" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('image').hasError('required') && formArtist.get('image').touched">
-                            La imagen de la banda es requerida.</span>
+                            {{'GENERAL.THREE-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
-                        <label>Miembros</label>
+                        <label>{{'GENERAL.MEMBERS' |translate}}</label>
                         <input type="text" formControlName="members" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('members').hasError('required') && formArtist.get('members').touched">
-                            Los miembros de la banda son requeridos.</span>
+                            {{'GENERAL.FOUR-MESSAGE' |translate}}</span>
                     </div>
 
 
@@ -66,11 +65,11 @@
 
 
                     <div class="form-group">
-                        <label>Ex-Miembros</label>
+                        <label>{{'GENERAL.EXMEMBERS' |translate}}</label>
                         <input type="text" formControlName="exmembers" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('exmembers').hasError('required') && formArtist.get('exmembers').touched">
-                            Los ex-miembros de la banda son requeridos, en caso de no tener poner ninguno.</span>
+                            {{'GENERAL.FIVE-MESSAGE' |translate}}</span>
                     </div>
 
 
@@ -80,7 +79,7 @@
                         <input type="text" formControlName="spotify" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('spotify').hasError('required') && formArtist.get('spotify').touched">
-                            Añade la url de spotify de la banda.</span>
+                            {{'GENERAL.SIX-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
@@ -88,7 +87,7 @@
                         <input type="text" formControlName="youtube" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('youtube').hasError('required') && formArtist.get('youtube').touched">
-                            Añade la url de youtube de la banda.</span>
+                            {{'GENERAL.SEVEN-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
@@ -96,18 +95,18 @@
                         <input type="text" formControlName="imusic" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('imusic').hasError('required') && formArtist.get('imusic').touched">
-                            Añade la url de imusic de la banda.</span>
+                            {{'GENERAL.EIGHT-MESSAGE' |translate}}</span>
                     </div>
 
                     <div class="form-group">
-                        <label>Web oficial</label>
+                        <label>Web</label>
                         <input type="text" formControlName="web" class="form-control" required>
                         <span class="text-danger"
                             *ngIf="formArtist.get('web').hasError('required') && formArtist.get('web').touched">
-                            Añade la url de web oficial de la banda.</span>
+                            {{'GENERAL.TEN-MESSAGE' |translate}}</span>
                     </div>
 
-                    <input type="submit" value="Guardar" class="submit btn form-control mt-4">
+                    <input type="submit" value="{{'GENERAL.SAVE' |translate}}" class="submit btn form-control mt-4">
 
                 </div>
 
