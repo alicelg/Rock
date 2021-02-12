@@ -6,3 +6,19 @@
 h3 {
     cursor: pointer;
 }
+
+select {
+    background-color: #181818;
+    color: #e60073;
+    border: 1px solid #e60073;
+}
+
+select:hover {
+    background-color: #181818;
+    color: white;
+}
+
+.btn {
+    background-color: #e60073;
+    color: black;
+}
