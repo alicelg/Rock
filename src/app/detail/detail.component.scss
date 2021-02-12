@@ -70,3 +70,24 @@ a:hover {
         display: none;
     }
 }
+
+.band {
+    width: 250px;
+    height: 250px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 992px) {
+    .aside {
+        display: none;
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+    }
+}

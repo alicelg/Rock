@@ -13,7 +13,7 @@
         <div class="col-md-10">
             <div class="row container-header pt-5 pb-5">
                 <div class="col-md-4 text-center">
-                    <img [src]="selectedArtist.image" class="rounded-circle m-3 " alt="...">
+                    <img [src]="selectedArtist.image" class="rounded-circle m-3 band" alt="...">
                 </div>
                 <div class="col-md-8">
                     <h2 class="mt-5 text-center text-md-left title">{{selectedArtist.band}}</h2>
@@ -26,7 +26,7 @@
                     <p>{{selectedArtist.description}}</p>
 
                 </div>
-                <div class="col-md-7 p-5">
+                <div class="col-md-8 p-5">
 
 
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YzjZEci-EiU" frameborder="0"
@@ -37,45 +37,43 @@
                 </div>
 
 
-                <div class="row">
-                    <div class="col-md-4 p-5">
+                <div class="row pt-5 pb-5">
+                    <div class="col-md-4 p-5 ml-5">
                         <h3 class="text-center mb-4">Datos curiosos</h3>
-
                         <h6 class="mb-3"> <strong>Origen:</strong> {{selectedArtist.origin}}</h6>
-
                         <h6 class="mb-3"> <strong>Miembros:</strong> {{selectedArtist.members}}</h6>
-
                         <h6 class="mb-3"> <strong>Ex-miembros: </strong> {{selectedArtist.exmembers}}</h6>
                     </div>
 
-                    <div class="col-md-8 p-5">
+                    <div class="offline-2  col-md-6 p-5 mx-auto">
                         <h3 class="text-center pb-3">Empezar a escuchar </h3>
 
                         <div class="row">
 
-                            <div class="col-2">
+                            <div class="col-3">
 
                                 <a href="{{selectedArtist.youtube}}" target="_blank">
                                     <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c545.png"
-                                        class="rounded p-1 pt-3 ml-5" alt="..." width="30%"> Youtube</a>
+                                        class="rounded p-1 pt-3 icon" alt="...">
+                                </a>
                             </div>
 
-                            <div class="col-2">
+                            <div class="col-3">
 
                                 <a href="{{selectedArtist.imusic}}" target="_blank">
                                     <img src="https://yungcitizen.com/wp-content/uploads/2018/09/apple_music_logo.png"
-                                        class="rounded p-1" alt="..." width="30%">imusic</a>
+                                        class="rounded p-1 icon" alt="..."></a>
                             </div>
 
-                            <div class="col-2">
+                            <div class="col-3">
                                 <a href="{{selectedArtist.spotify}}" target="_blank">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png"
-                                        class="rounded p-1" alt="..." width="30%">Spotify</a>
+                                        class="rounded p-1 icon" alt="..."></a>
                             </div>
-                            <div class="col-2">
+                            <div class="col-3">
                                 <a href="{{selectedArtist.web}}" target="_blank">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/GNOME_Web_logo--2018.svg/1200px-GNOME_Web_logo--2018.svg.png"
-                                        class="rounded p-1" alt="..." width="30%">Web</a>
+                                        class="rounded p-1 icon" alt="..."></a>
                             </div>
                         </div>
 
