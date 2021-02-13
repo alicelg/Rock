@@ -3,25 +3,19 @@
     <div class="row p-5">
 
         <div class="col-md-6 mb-3">
-
             <h3 [routerLink]="['home']"> &copy; Rock 70's</h3>
-
         </div>
 
-        <div class="col-md-3 col-7 mx-auto">
+        <div class="col-md-3 col-6 mx-auto">
             <h4 class="btn" [routerLink]="['/form']"> {{'GENERAL.NOEXIT' |translate}}</h4>
         </div>
 
-        <div class="col-2 text-right">
+        <div class="col-md-2 col-6 text-right">
             <div ngbDropdown placement="top-right" class="d-inline-block">
-                <button class="btn-select btn-outline-primary" id="dropdownBasic2"
-                    ngbDropdownToggle>{{('GENERAL.LANGUAGE.'+translateService.currentLang.toUpperCase()) |
-                    translate}}</button>
+                <button class="btn-select btn-outline-primary" id="dropdownBasic2"  ngbDropdownToggle>{{('GENERAL.LANGUAGE.'+translateService.currentLang.toUpperCase()) | translate}}</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-                    <button ngbDropdownItem (click)="changeLanguage('es-ES')">{{'GENERAL.LANGUAGE.ES-ES'
-                        |translate}}</button>
-                    <button ngbDropdownItem (click)="changeLanguage('en-GB')">{{'GENERAL.LANGUAGE.EN-GB'
-                        |translate}}</button>
+                    <button ngbDropdownItem (click)="changeLanguage('es-ES')">{{'GENERAL.LANGUAGE.ES-ES' |translate}}</button>
+                    <button ngbDropdownItem (click)="changeLanguage('en-GB')">{{'GENERAL.LANGUAGE.EN-GB' |translate}}</button>
 
                 </div>
             </div>
