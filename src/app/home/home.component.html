@@ -1,45 +1,31 @@
 <div class="container-fluid container-header pt-5 pb-5">
-
     <div class="container">
-
         <h2 class="title">Rock 70's</h2>
-
         <div class="d-flex text-center pt-5 ">
             <div class="my-auto w-100 text-white">
                 <div class="d-flex justify-content-center">
                     <div class="searchbar">
-                        <input class="search_input" type="text" #searchInput
-                            placeholder="{{'GENERAL.SEARCH' |translate}}">
+                        <input class="search_input" type="text" #searchInput placeholder="{{'GENERAL.SEARCH' |translate}}" (input)="filterArtistsByTerm(searchInput.value)">
                         <a class="search_icon">
                             <fa-icon class="search" [icon]="['fas', 'search']"></fa-icon>
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </div>
 
 <div class="container-fluid container-body">
-
     <div class="container pt-5">
-
         <div class="row pb-5">
-
-            <div class="card m-3 mx-auto" style="width: 16rem;" [routerLink]="['/detail', artist.id]"
-                *ngFor="let artist of arrArtists; let indice = index">
+            <div class="card m-3 mx-auto" style="width: 16rem;" [routerLink]="['/detail', artist.id]" *ngFor="let artist of arrArtistFiltered; let indice = index">
                 <img src={{artist.image}} class="rounded-circle m-3 " alt="...">
                 <div class="text-body text-center">
                     <h3>{{artist.band}}</h3>
                     <p>{{'GENERAL.BAND' |translate}}</p>
                 </div>
             </div>
-
         </div>
-
     </div>
 </div>
