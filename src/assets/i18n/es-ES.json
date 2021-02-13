@@ -2,9 +2,6 @@
     "GENERAL": {
         "BAND": "Banda",
         "NOEXIT": "¿No encuentras la banda que buscas?",
-        "IDIOMS": "Idioma",
-        "ENGLISH": "Ingles",
-        "SPANISH": "Español",
         "SEARCH": "Buscar",
         "ARTISTS": "Artistas",
         "DESCRIPTION": "Descripción",
@@ -36,6 +33,10 @@
         "EIGHT-MESSAGE": "Añade la url de imusic de la banda.",
         "NINE-MESSAGE": "Añade la url de web oficial de la banda.",
         "TEN-MESSAGE": "El  país de origen de la banda es requerido.",
-        "SAVE": "Guardar"
+        "SAVE": "Guardar",
+        "LANGUAGE": {
+            "ES-ES": "Español",
+            "EN-GB": "English"
+        }
     }
 }
