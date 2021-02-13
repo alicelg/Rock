@@ -1,0 +1,43 @@
+{
+    "GENERAL": {
+        "BAND": "Band",
+        "NOEXIT": "Can't find the band you're looking for?",
+        "SEARCH": "Search",
+        "ARTISTS": "Artists",
+        "DESCRIPTION": "Description",
+        "URL": "The URL is not correct.",
+        "ONE-TEXT-DESCRIPTION": "It is a British rock band originally from London. The band was formed in April 1962 by Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts, and Ian Stewart. Brian Jones was fired in June 1969, dying three weeks later, being replaced by guitarist Mick Taylor, who would leave the group in 1975 and would be replaced by Ronnie Wood. With the retirement of Bill Wyman in 1993 bassist Darryl Jones was included who, although he has played with the band since the recording of the album Voodoo Lounge in 1994, is not an official member.",
+        "TWO-TEXT-DESCRIPTION": "It was a British hard rock group founded in 1968 by guitarist Jimmy Page, who had belonged to The Yardbirds. The band consisted of John Paul Jones on bassist and keyboardist, vocalist Robert Plant and John Bonham on drums (who had coincided with Plant on The Band of Joy). Led Zeppelin featured elements from a wide spectrum of influences, including blues. , rock and roll, soul, Celtic music, Indian music, folk, and country, being one of the seminal groups for the emergence of heavy metal.",
+        "THREE-TEXT-DESCRIPTION": "It is a British rock band formed in 1970 in London by singer and pianist Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bassist John Deacon. Although the group has presented casualties of two of its members (Mercury, who died in 1991, and Deacon, who retired in 1997), the remaining members, Brian May and Roger Taylor, continue to work under the name Queen, so the band still it is considered active.",
+        "FOUR-TEXT-DESCRIPTION": "It was a British rock band, founded in London in 1965. It is considered a cultural icon of the 20th century and one of the most influential and acclaimed bands in the history of music, which gained great popularity thanks to its psychedelic music that evolved into the Progressive rock and symphonic rock over time. She is known for her highly philosophical songs, sonic experimentation, innovative album covers, and elaborate live shows. Its sales exceed 300 million albums sold worldwide, 97.5 million of them in the United States alone.",
+        "FIVE-TEXT-DESCRIPTION": "It is a British hard rock band formed in 1968 in Hertford, United Kingdom. She is considered one of the pioneers of this subgenre, and the pioneers of heavy metal along with Led Zeppelin and Black Sabbath. His music has incorporated elements of progressive rock, symphonic rock, psychedelic rock, blues rock, funk rock, Britpop, and classical music. Deep Purple has sold more than 120 million records worldwide.",
+        "SIX-TEXT-DESCRIPTION": "A British-Australian hard rock band, formed in 1973 in Australia by Scottish brothers Malcolm and Angus Young, their albums have sold an estimated 200 million copies, embarking on massive tours around the world, and their Successes have scored several outstanding film productions. Their live performances are famous, resulting in vibrant and exultant shows of the first order. Much of it is due to the extravagant style of their lead guitarist and visual symbol, Angus Young; who assumes the role of lead guitarist during concerts, thanks to his dynamic and adrenaline-pumping stage displays dressed as a street schoolboy.",
+        "SEVEN-TEXT-DESCRIPTION": "It was a punk band formed in Forest Hills, in the district of Queens (New York, United States) in 1974, and dissolved twenty-two years later, in 1996. Pioneers and leaders of the nascent punk, they laid the foundations of this musical genre with simple, minimalist, repetitive compositions and very simple or even meaningless lyrics, in clear opposition to the pomposity and lavishness of the bands that were triumphing in the 1970s market: with their long guitar solos, the complex progressive rock songs and its enigmatic lyrics. Their sound is characterized by being fast and direct, with influences from 1950s rockabilly, surf rock, The Beatles, The Who, The Velvet Underground, 1960s girl bands such as The Shangri-Las and protopunk garage. by MC5 and The Stooges.",
+        "EIGHT-TEXT-DESCRIPTION": "They are an American rock band formed in New York in January 1973 by bassist Gene Simmons and guitarist Paul Stanley, who were later joined by drummer Peter Criss and guitarist Ace Frehley, known for their facial makeup and extravagant looks. costumes, the group first became known to the public in the mid-1970s thanks to their live performances, which included pyrotechnics, flares, cannons, elevator drums, smoky guitars and fake blood. Considering solo albums from 1978, Kiss has achieved thirty RIAA gold records by 2015 and is considered the American band to have received the most of these certifications. The group has sold more than 80 million albums worldwide and 25 million in the United States alone.",
+        "DATA": "Fun facts",
+        "ORIGIN": "Origin",
+        "USA": "United States",
+        "UK": "United kingdom",
+        "AUSTRALIA": "Australia",
+        "MEMBERS": "Members",
+        "EXMEMBERS": "Ex-Members",
+        "START": "Start listening",
+        "DELETE": "Remove band",
+        "IMAGE": "Image",
+        "ONE-MESSAGE": "The name of the band is required.",
+        "TWO-MESSAGE": "The description of the band is required.",
+        "THREE-MESSAGE": "The image of the band is required.",
+        "FOUR-MESSAGE": "Band members are required.",
+        "FIVE-MESSAGE": "Former band members are required, in case you don't have one.",
+        "SIX-MESSAGE": "Add the spotify url of the band.",
+        "SEVEN-MESSAGE": "Add the youtube url of the band.",
+        "EIGHT-MESSAGE": "Add the imusic url of the band.",
+        "NINE-MESSAGE": "Add the url of the band's official website.",
+        "TEN-MESSAGE": "The country of origin of the band is required.",
+        "SAVE": "Save",
+        "LANGUAGE": {
+            "ES-ES": "Español",
+            "EN-GB": "English"
+        }
+    }
+}
