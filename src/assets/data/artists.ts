@@ -88,7 +88,7 @@ export const initArtists = [
         band: "The Ramones",
         origin: "Estados Unidos",
         description: "GENERAL.SEVEN-TEXT-DESCRIPTION",
-        image: "../../assets/image/ramones.jpg",
+        image: "../../assets/image/ramones.png",
         spotify: "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
         imusic: "https://music.apple.com/es/artist/ramones/60715",
         youtube: "https://www.youtube.com/embed/F3J0iwwsq-w?start=21",
