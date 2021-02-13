@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArtistService } from '../services/artists.service';
 
@@ -20,6 +20,8 @@ export class FormComponent implements OnInit {
     private router: Router
   ) {
 
+    const urlRegex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+
     this.formArtist = new FormGroup({
       band: new FormControl('', [
         Validators.required
@@ -31,16 +33,16 @@ export class FormComponent implements OnInit {
         Validators.required
       ]),
       image: new FormControl('', [
-        Validators.required
+        Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
       spotify: new FormControl('', [
-        Validators.required
+        Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
       imusic: new FormControl('', [
-        Validators.required
+        Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
       youtube: new FormControl('', [
-        Validators.required
+        Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
       members: new FormControl('', [
         Validators.required
@@ -49,7 +51,7 @@ export class FormComponent implements OnInit {
         Validators.required
       ]),
       web: new FormControl('', [
-        Validators.required
+        Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
     })
     this.artistId = JSON.parse(localStorage.getItem('artists')) ? (JSON.parse(localStorage.getItem('artists')).slice(-1)[0].id + 1) : 1;
@@ -59,11 +61,23 @@ export class FormComponent implements OnInit {
   ngOnInit(): void { }
 
   async onSubmit() {
-    if (this.formArtist.value) {
+    if (this.formArtist.valid) {
       await this.artistService.addArtist(this.formArtist.value, this.artistId);
       this.artistId++
       this.formArtist.reset();
+    } else {
+      Object.keys(this.formArtist.controls).forEach(field => {
+        const control = this.formArtist.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
     }
+  }
+
+  regexValidator(regex: RegExp, error: ValidationErrors): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } => {
+      const valid = regex.test(control.value);
+      return valid ? null : error;
+    };
   }
 }
 

@@ -18,17 +18,17 @@
                     <div class="form-group">
                         <label>{{'GENERAL.BAND' |translate}}</label>
                         <input type="text" formControlName="band" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('band').hasError('required') && formArtist.get('band').touched">
-                            {{'GENERAL.ONE-MESSAGE' |translate}}</span>
+                            {{'GENERAL.ONE-MESSAGE' |translate}}</p>
                     </div>
 
                     <div class="form-group">
                         <label>{{'GENERAL.ORIGIN' |translate}}</label>
                         <input type="text" formControlName="origin" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('origin').hasError('required') && formArtist.get('origin').touched">
-                            {{'GENERAL.TEN-MESSAGE' |translate}}</span>
+                            {{'GENERAL.TEN-MESSAGE' |translate}}</p>
                     </div>
 
 
@@ -36,25 +36,29 @@
                         <label>{{'GENERAL.DESCRIPTION' |translate}}</label>
                         <textarea cols="40" rows="4" type="text" formControlName="description" class="form-control"
                             required> </textarea>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('description').hasError('required') && formArtist.get('description').touched">
-                            {{'GENERAL.TWO-MESSAGE' |translate}}</span>
+                            {{'GENERAL.TWO-MESSAGE' |translate}}</p>
                     </div>
 
                     <div class="form-group">
                         <label>{{'GENERAL.IMAGE' |translate}}</label>
                         <input type="text" formControlName="image" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('image').hasError('required') && formArtist.get('image').touched">
-                            {{'GENERAL.THREE-MESSAGE' |translate}}</span>
+                            {{'GENERAL.THREE-MESSAGE' |translate}}</p>
+                        <p class="text-danger"
+                            *ngIf="formArtist.get('image').hasError('url') && formArtist.get('image').touched">
+                            {{'URL' |translate}}</p>
+
                     </div>
 
                     <div class="form-group">
                         <label>{{'GENERAL.MEMBERS' |translate}}</label>
                         <input type="text" formControlName="members" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('members').hasError('required') && formArtist.get('members').touched">
-                            {{'GENERAL.FOUR-MESSAGE' |translate}}</span>
+                            {{'GENERAL.FOUR-MESSAGE' |translate}}</p>
                     </div>
 
 
@@ -67,9 +71,9 @@
                     <div class="form-group">
                         <label>{{'GENERAL.EXMEMBERS' |translate}}</label>
                         <input type="text" formControlName="exmembers" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('exmembers').hasError('required') && formArtist.get('exmembers').touched">
-                            {{'GENERAL.FIVE-MESSAGE' |translate}}</span>
+                            {{'GENERAL.FIVE-MESSAGE' |translate}}</p>
                     </div>
 
 
@@ -77,33 +81,33 @@
                     <div class="form-group">
                         <label>Spotify</label>
                         <input type="text" formControlName="spotify" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('spotify').hasError('required') && formArtist.get('spotify').touched">
-                            {{'GENERAL.SIX-MESSAGE' |translate}}</span>
+                            {{'GENERAL.SIX-MESSAGE' |translate}}</p>
                     </div>
 
                     <div class="form-group">
                         <label>Youtube</label>
                         <input type="text" formControlName="youtube" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('youtube').hasError('required') && formArtist.get('youtube').touched">
-                            {{'GENERAL.SEVEN-MESSAGE' |translate}}</span>
+                            {{'GENERAL.SEVEN-MESSAGE' |translate}}</p>
                     </div>
 
                     <div class="form-group">
                         <label>Imusic</label>
                         <input type="text" formControlName="imusic" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('imusic').hasError('required') && formArtist.get('imusic').touched">
-                            {{'GENERAL.EIGHT-MESSAGE' |translate}}</span>
+                            {{'GENERAL.EIGHT-MESSAGE' |translate}}</p>
                     </div>
 
                     <div class="form-group">
                         <label>Web</label>
                         <input type="text" formControlName="web" class="form-control" required>
-                        <span class="text-danger"
+                        <p class="text-danger"
                             *ngIf="formArtist.get('web').hasError('required') && formArtist.get('web').touched">
-                            {{'GENERAL.TEN-MESSAGE' |translate}}</span>
+                            {{'GENERAL.TEN-MESSAGE' |translate}}</p>
                     </div>
 
                     <input type="submit" value="{{'GENERAL.SAVE' |translate}}" class="submit btn form-control mt-4">
