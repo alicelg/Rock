@@ -52,7 +52,7 @@ export class FormComponent implements OnInit {
         Validators.required
       ]),
     })
-    this.artistId = JSON.parse(localStorage.getItem('posts')) ? (JSON.parse(localStorage.getItem('posts')).slice(-1)[0].id + 1) : 1;
+    this.artistId = JSON.parse(localStorage.getItem('artists')) ? (JSON.parse(localStorage.getItem('artists')).slice(-1)[0].id + 1) : 1;
 
   }
 

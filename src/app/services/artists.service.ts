@@ -30,6 +30,7 @@ export class ArtistService {
             this.artists = JSON.parse(localStorage.getItem('artists'));
         } else {
             this.artists = initArtists;
+            localStorage.setItem('artists', JSON.stringify(this.artists))
         }
     }
 
