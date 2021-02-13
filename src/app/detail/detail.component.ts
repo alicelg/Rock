@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Artist, ArtistService } from '../services/artists.service';
 
@@ -17,7 +18,8 @@ export class DetailComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
     private artistService: ArtistService,
-    private router: Router) { }
+    private router: Router,
+    public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
 
