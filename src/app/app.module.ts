@@ -16,6 +16,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+function customTranslateLoader(http:HttpClient){
+  console.log('aqui');
+  
+  return new TranslateHttpLoader(http, 'src/../assets/i18n/', '.json')
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +40,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (http: HttpClient) => {
-          return new TranslateHttpLoader(http);
-        },
+        // useFactory: (http: HttpClient) => {
+        //   return new TranslateHttpLoader(http);
+        // },
+        useFactory: customTranslateLoader,
         deps: [HttpClient]
       }
     }),
