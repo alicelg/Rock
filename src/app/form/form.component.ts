@@ -23,34 +23,34 @@ export class FormComponent implements OnInit {
     const urlRegex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
 
     this.formArtist = new FormGroup({
-      band: new FormControl('', [
+      band: new FormControl('Alice López', [
         Validators.required
       ]),
-      origin: new FormControl('', [
+      origin: new FormControl('Colombia - España', [
         Validators.required
       ]),
-      description: new FormControl('', [
+      description: new FormControl('Futura programadora de Front-end en Kubide. ', [
         Validators.required
       ]),
-      image: new FormControl('', [
+      image: new FormControl('https://alicelg.github.io/Proyectos/tecnologias', [
         Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
-      spotify: new FormControl('', [
+      spotify: new FormControl('https://alicelg.github.io/Proyectos/formacion', [
         Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
-      imusic: new FormControl('', [
+      imusic: new FormControl('https://alicelg.github.io/Proyectos/proyectos', [
         Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
-      youtube: new FormControl('', [
+      youtube: new FormControl('https://www.youtube.com/embed/if1Hk1qgm14', [
         Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
-      members: new FormControl('', [
+      members: new FormControl('Alice López', [
         Validators.required
       ]),
-      exmembers: new FormControl('', [
+      exmembers: new FormControl('Ninguno', [
         Validators.required
       ]),
-      web: new FormControl('', [
+      web: new FormControl('https://alicelg.github.io/Proyectos/', [
         Validators.required, this.regexValidator(new RegExp(urlRegex), { 'url': true })
       ]),
     })

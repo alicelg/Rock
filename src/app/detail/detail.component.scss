@@ -68,6 +68,18 @@ a:hover {
     height: 100px;
 }
 
+.btn {
+    background-color: #e60073;
+    color: black;
+}
+.descriptionBox{
+    min-height: 400px;
+}
+
+.home{
+    display: none;
+}
+
 @media (max-width: 992px) {
     .aside {
         display: none;
@@ -77,12 +89,9 @@ a:hover {
         width: 100%;
         height: 100%;
     }
+
+    .home{
+        display: block;
+    }
 }
 
-.btn {
-    background-color: #e60073;
-    color: black;
-}
-.descriptionBox{
-    min-height: 400px;
-}

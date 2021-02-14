@@ -6,7 +6,7 @@
                     (click)="getArtistData(artist.id)" [routerLink]="['/detail', artist.id]">
                     <li class="list-group-item">{{artist.band}}</li>
                 </ul>
-                <button class="btn ml-5 mt-5 aside" [routerLink]="['home']"> Home </button>
+                <button class="btn ml-5 mt-5 aside" [routerLink]="['home']"> {{'GENERAL.HOME'| translate}} </button>
             </div>
             <div class="col-md-10">
                 <div class="row container-header pt-md-5 pb-5">
@@ -63,9 +63,15 @@
                         </div>
     
                     </div>
+
+
     
-                    <div class="col-md-4 text-center">
-                        <button class="btn" (click)="onClickDelete(selectedArtist.id)">Borrar banda</button>
+                    <div class="col-md-4 col-6 text-center">
+                        <button class="btn" (click)="onClickDelete(selectedArtist.id)">{{'GENERAL.DELETE'| translate}}</button>
+                    </div>
+
+                    <div class="col-md-4 col-6 text-center">
+                        <button class="btn home" [routerLink]="['home']">{{'GENERAL.HOME'| translate}} </button>
                     </div>
     
                 </div>
